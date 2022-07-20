@@ -14,7 +14,7 @@ EXPOSE 9000
 
 RUN addgroup -S sonarqube && adduser -S sonarqube -G sonarqube
 
-RUN apk add --no-cach wget unzip openjdk8
+RUN apk add --no-cach wget unzip alpine-sdk openjdk8
 
 RUN wget --no-check-certificate https://download.tanukisoftware.com/wrapper/${WRAPPER_VERSION}/wrapper_prerelease_${WRAPPER_VERSION}.tar.gz \
         && wget http://archive.apache.org/dist/ant/binaries/apache-ant-${ANT_VERSION}-bin.tar.gz \
